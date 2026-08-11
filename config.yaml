@@ -1,0 +1,25 @@
+# AI Code Reviewer 配置文件
+
+ollama:
+  model: "qwen2.5-coder:32b"
+  host: "http://localhost:11434"
+  temperature: 0.1
+  max_tokens: 4096
+
+github:
+  token: ""
+
+review:
+  ignore_patterns:
+    - "*.lock"
+    - "*.min.js"
+    - "*.min.css"
+    - "*.map"
+    - "package-lock.json"
+    - "yarn.lock"
+    - "pnpm-lock.yaml"
+    - "poetry.lock"
+    - "*.pb.go"
+    - "*.generated.*"
+  max_files: 20
+  max_lines: 500
