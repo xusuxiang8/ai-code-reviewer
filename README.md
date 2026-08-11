@@ -13,7 +13,7 @@
 - GitHub 集成 - 支持自动提交 Review 到 PR
 - GitHub Actions - 一键集成到 CI/CD 流水线
 
-## 安装
+## 快速开始
 
 ```bash
 git clone https://github.com/xusuxiang8/ai-code-reviewer.git
@@ -24,9 +24,16 @@ pip install -r requirements.txt
 ## 使用
 
 ```bash
+# 审查一个 PR
 python main.py https://github.com/owner/repo/pull/123 --token ghp_xxx
+
+# 审查并提交
 python main.py https://github.com/owner/repo/pull/123 --token ghp_xxx --submit
+
+# 使用轻量模型
 python main.py owner/repo#123 --token ghp_xxx --model qwen2.5-coder:7b
+
+# 保存报告
 python main.py owner/repo#123 --token ghp_xxx -o review.md
 ```
 
@@ -40,6 +47,10 @@ python main.py owner/repo#123 --token ghp_xxx -o review.md
 |------|---------|---------|
 | qwen2.5-coder:32b | 20GB+ | 较慢但质量高 |
 | qwen2.5-coder:7b | 6GB+ | 快速 |
+
+## 赞助
+
+如果这个项目帮到了你，欢迎通过 [GitHub Sponsors](https://github.com/sponsors/xusuxiang8) 支持我持续开发和维护。
 
 ## License
 
